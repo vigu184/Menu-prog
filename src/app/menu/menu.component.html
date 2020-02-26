@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<mat-card>
+    <mat-card-title>
+    Trump Card  
+    </mat-card-title>
+    <mat-card-content>
+        <button mat-raised-button color="primary" [matMenuTriggerFor] = "menu"> Open Menu </button>
+        <mat-menu #menu="matMenu">  
+            <button mat-menu-item [matMenuTriggerFor]="subMenu">
+                <mat-icon>settings</mat-icon>   
+                 <span>Settings</span>
+                 <mat-menu #subMenu="matMenu">
+                     <button mat-menu-item>General</button>
+                     <button mat-menu-item>Profile</button>
+                 </mat-menu>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>voicemail</mat-icon>
+                Voicemail
+            </button>
+            <button mat-menu-item>
+               <mat-icon>notifications_off</mat-icon>
+                <span>Disable alerts</span> 
+            </button>
+        </mat-menu>
+    </mat-card-content>
+</mat-card>
